@@ -1,7 +1,3 @@
-def call() {
-    stage("Build Docker Image") {
-        steps {
-            sh "docker build -t two-tier-flask-app ."
+def call(String imageName) {
+            sh "docker build -t ${imageName} ."
         }
-    }
-}
